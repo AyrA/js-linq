@@ -235,8 +235,8 @@ Array.prototype.Select = function (exp) {
 	return this.map(exp);
 };
 
-Array.prototype.Concat = function (arr) {
-	return this.concat(arr);
+Array.prototype.Concat = function (seq) {
+	return this.concat(seq);
 };
 
 Array.prototype.Distinct = function (exp) {
