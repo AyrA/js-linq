@@ -241,10 +241,3 @@ Array.prototype.Distinct = function (exp) {
 		});
 	}
 };
-
-console.log(
-	Array.Range(0, 9, 1)
-	.Concat(Array.Range(20, 20, -1))
-	.Distinct()
-	.Where(m => m % 2 === 0)
-	.OrderBy(m => m));
