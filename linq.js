@@ -218,7 +218,7 @@ Array.prototype.Take = function (count) {
 	if (typeof(count) !== typeof(1) || count !== count || count < 0) {
 		throw new Error(".Take: exp is not a function");
 	}
-	return this.length > count ? this.slice(0, count) : this;
+	return this.length > count ? this.slice(0, count) : this.slice(0);
 };
 
 Array.prototype.Where = function (exp) {
