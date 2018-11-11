@@ -186,8 +186,20 @@ Array.prototype.OrderBy = function (exp) {
 	});
 };
 
-//Aliases for built-ins
+//Checks if the two sequences are equal
+Array.prototype.SequenceEquals = function (seq) {
+	if (this.length === seq.length) {
+		for (var i = 0; i < this.length; i++) {
+			if (this[i] !== seq[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	return false;
+};
 
+//Aliases for built-ins
 Array.prototype.Reverse = function () {
 	return this.reverse();
 };
