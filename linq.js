@@ -24,6 +24,11 @@ Array.Range = function (start, count, step) {
 	return ret;
 };
 
+//Converts an enumerable expression to a native JS Array
+Array.toArray = function (seq) {
+	return (x instanceof Array) ? seq : Array.prototype.slice.call(seq);
+};
+
 //Returns maximum value
 //If given, "exp" must convert the given entry to a number
 Array.prototype.Max = function (exp) {
