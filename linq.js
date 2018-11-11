@@ -14,7 +14,7 @@ Array.Range = function (start, count, step) {
 	if (count != count || typeof(count) != typeof(1) || count < 1 || !isFinite(start)) {
 		count = 1;
 	}
-	if (step != step || typeof(step) != typeof(1) || step <= 0 || !isFinite(start)) {
+	if (step != step || typeof(step) != typeof(1) || step === 0 || !isFinite(start)) {
 		step = 1;
 	}
 	for (var i = 0; i < count; i++) {
