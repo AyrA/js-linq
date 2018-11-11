@@ -188,6 +188,9 @@ Array.prototype.OrderBy = function (exp) {
 
 //Checks if the two sequences are equal
 Array.prototype.SequenceEquals = function (seq) {
+	if (!seq || seq.length === undefined) {
+		throw new Error("Sequence not defined");
+	}
 	if (this.length === seq.length) {
 		for (var i = 0; i < this.length; i++) {
 			if (this[i] !== seq[i]) {
